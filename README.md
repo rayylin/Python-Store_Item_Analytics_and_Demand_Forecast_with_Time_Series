@@ -8,7 +8,7 @@ we have 5 years of transaction data (930,000 observasions) of 10 stores and 10 i
 
 
 
-#EDA
+# EDA
 First we can use info() function to have a basic understanding of the data.
 
 ![image](https://user-images.githubusercontent.com/58899897/197666672-c42fb2ca-d277-4e62-86ab-edaf49d76acb.png)
@@ -49,10 +49,20 @@ We can also use heat map to visualize the performances of items in each store. T
 
 ![image](https://user-images.githubusercontent.com/58899897/197683721-89ff7549-cc2c-4a25-bda7-ae27a50af6de.png)
 
+To better manage our inventory, we might want to know the performance of each day of the week, so we know how many items we should order. 
+
+![image](https://user-images.githubusercontent.com/58899897/198027366-eeeac162-bec7-4e32-88ee-b67a13dc2a05.png)
+
+If we want to know the performance of each item, we just need to use store to group data rather than store.
+
+![image](https://user-images.githubusercontent.com/58899897/198028001-d6ffadb1-c52b-4380-90fc-ebe97cedbb48.png)
+
+We could also use boxplot, but the result is not easy to interpret in this case.
+
+![image](https://user-images.githubusercontent.com/58899897/198041196-0b7dd616-798a-4cac-a2b7-a34463021c74.png)
 
 
-
-#Time Series Model
+# Time Series Model
 
 The Additive Model it is a model of data in which the effects of the individual factors are differentiated and added to model the data. 
 y(t) = Trend + Seasonality + Noise
@@ -65,10 +75,24 @@ y(t) = Trend * Seasonality * Noise
 
 Different from the additive model, the multiplicative model has an increasing or decreasing amplitude and/or frequency over time.
 
-![image](https://user-images.githubusercontent.com/58899897/195490332-2de48110-8b48-4020-acfd-1b1a00a60ee2.png)
+# ACF & PACF
+Autocorrelation intends to measure the relationship between a variable’s present value and any past values. It’s a good idea to make an autocorrelation plot to compare the values of the autocorrelation function (ACF) against different lag sizes.
 
+![image](https://user-images.githubusercontent.com/58899897/198070542-b9b503d9-6790-4898-be24-dbfca079806f.png)
 
+![image](https://user-images.githubusercontent.com/58899897/198070637-95b7219f-ed89-4e71-b605-24fda482712d.png)
 
+# Arima Model with p, d, q
+We could use sta
+For the ARIMA model, p is the number of autoregressive terms, d is the number of nonseasonal differences needed for stationarity, and. q is the number of lagged forecast errors in the prediction equation. We are going to use Time Series analysis (tsa) of Statsmodels with p = 6, d =1, and q =0.
+
+![image](https://user-images.githubusercontent.com/58899897/198098390-928ecb5c-81df-462a-a8d1-ed7721e0aad6.png)
+
+![image](https://user-images.githubusercontent.com/58899897/198100259-df8cd470-b90d-4a52-a86d-b5e123c73d3c.png)
+
+As the figure shows that the performance is not very good, we could import more information to improve the performance.
+
+![image](https://user-images.githubusercontent.com/58899897/198102831-20bcde2b-a127-41a5-99eb-c424e4efb7b2.png)
 
 
 References:
