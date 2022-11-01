@@ -1,4 +1,4 @@
-# Store-Item-Demand-Forecast
+# Store-Item-Analytics-and-Demand-Forecast
 In this project, we will use several models to conduct demand forecasts, models including Time Series
 Demand forecast is an important issue in the supply chain. With a forecast of good accuracy, we can better schedule our material and capacity planning.
 
