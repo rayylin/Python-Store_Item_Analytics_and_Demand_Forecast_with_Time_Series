@@ -87,7 +87,7 @@ For the ARIMA model, p is the number of autoregressive terms, d is the number of
 
 ![image](https://user-images.githubusercontent.com/58899897/198098390-928ecb5c-81df-462a-a8d1-ed7721e0aad6.png)
 
-![image](https://user-images.githubusercontent.com/58899897/198100259-df8cd470-b90d-4a52-a86d-b5e123c73d3c.png)
+![image](https://user-images.githubusercontent.com/58899897/201824577-c2035c25-55f6-4cb5-a8e9-39e3053d450e.png)
 
 As the figure shows that the performance is not very good, we could import more information to improve the performance.
 
